@@ -1,14 +1,6 @@
 var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyWdJ8PWSgMSVQeK'}).base('appKS4Y0fnQPMwHzZ');
 
-// base('Photos').select({}).eachPage(function page(records, fetchNextPage) {
-//
-//     records.forEach(function(record) {
-//         console.log('Retrieved', record.get('Name'));
-//     });
-//
-//     fetchNextPage();
-
 base("photos").select({}).eachPage(gotPageOfCelebs, gotAllCelebs);
 
     const celebs = [];
@@ -58,8 +50,9 @@ function showCelebs() {
   celebs.forEach((celeb) => {
 
     var celebImage = document.createElement("img");
+    celebImage.classList.add("roll-images");
     celebImage.src = celeb.fields.image[0].url;
-    document.querySelector('body').append(celebImage);
+    document.querySelector('#grid').append(celebImage);
   });
 }
 

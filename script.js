@@ -95,36 +95,7 @@ function showCelebs() {
       window.location.reload();
   }
 
-  // function cameraFlash() {
-  //   var x = document.getElementById("text");
-  //   if (x.innerHTML === "Good morning!") {
-  //     x.innerHTML = "Good night!"; document.body.style.backgroundColor = '#1D2D76';
-  //   } else {
-  //     x.innerHTML = "Good morning!";
-  //     document.body.style.backgroundColor = '#FFBE1D';
-  //   }
-  // }
 
-
-// function refreshPage(){
-//     window.location.reload();
-// }
-//
-//
-// changeBg();
-//
-// window.addEventListener("load", event => {
-// document.getElementById("reload").onclick = function changeBg() {
-//   location.reload(true);
-// }
-// });
-//
-// function changeBg() {
-//   console.log("changeBg()");
-//
-// function switchText() {
-//   document.body.style.backgroundImage =
-//
 //
 //
 // showBooks();
