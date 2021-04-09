@@ -1,0 +1,78 @@
+body {
+  background-color: black;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  flex-direction: column;
+}
+
+#bgimg {
+  min-width: 100%;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* .flash {
+  background-color: white;
+  height: 100rem;
+  width: 100rem;
+} */
+
+.roll {
+  width: 35px;
+  height: 35px;
+  border: 0px solid black;
+  border-radius: 10%;
+  position: absolute;
+  margin-top: 32rem;
+  margin-right: 17rem;
+  background-color: black;
+}
+
+h2 {
+  color: white;
+  font-family: sans-serif;
+}
+
+/* .camera {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  background-image: url(https://dl.airtable.com/.attachmentThumbnails/c0e8cf1ecdb4b7de89862d8641a582e8/a9bef11f);
+  background-size: 1000px;
+} */
+
+.square {
+  position: absolute;
+  border: 1px solid yellow;
+  height: 300px;
+  width: 300px;
+  z-index: 5;
+}
+
+.circle {
+  position: absolute;
+  margin-right: 5px;
+  margin-top: 32rem;
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.circle2 {
+  position: absolute;
+  margin-right: 5px;
+  margin-top: 32rem;
+  border: 8px solid white;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  z-index: 2;
+}

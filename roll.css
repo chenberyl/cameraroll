@@ -1,0 +1,13 @@
+body {
+  background-color: white;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: 10fr;
+}
+
+.header {
+  
+}
