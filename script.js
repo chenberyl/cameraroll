@@ -1,11 +1,15 @@
-const el = document.querySelector('#bgimg');
-
-el.addEventListener("mousemove", (e) =>
-                    {
-  el.style.backgroundPositionX = -e.offsetX + "px";
-  el.style.backgroundPositionY = -e.offsetY + "px";
-
-});
+// const el = document.querySelector('body');
+//
+// el.addEventListener("mousemove", (e) =>
+//                     {
+//
+// el.style.backgroundPositionX = e.offsetX + 'px';
+// el.style.backgroundPositionY = e.offsetY + 'px';
+//
+//   // el.style.backgroundPositionX = -e.offsetX + "px";
+//   // el.style.backgroundPositionY = -e.offsetY + "px";
+//
+// });
 
 var Airtable = require('airtable');
 var base = new Airtable({apiKey: 'keyWdJ8PWSgMSVQeK'}).base('appKS4Y0fnQPMwHzZ');
@@ -42,7 +46,6 @@ function gotAllCelebs(err) {
 
   consoleLogCelebs();
   showCelebs();
-  showCelebsImg();
 }
 
 
@@ -52,20 +55,7 @@ function consoleLogCelebs() {
     console.log("Celeb:", celeb);
   });
 }
-//
-// function showCelebs() {
-//   console.log("showCelebs()");
-//   celebs.forEach((celeb) => {
-//
-//     const h2 = document.createElement("h2");
-//     h2.innerText = celeb.fields.name;
-//     document.body.appendChild(h2);
-//
-//     var celebImage = document.createElement("img");
-//     celebImage.src = celeb.fields.image[0].url;
-//     document.querySelector('body').append(celebImage);
-//   });
-// }
+
 
  function done(err) {
     if (err) { console.error(err); return; }
@@ -77,24 +67,43 @@ function showCelebs() {
   var celebImage = document.createElement("img");
   celeb = celebs[Math.floor(Math.random() * celebs.length)];
   celebImage.src = celeb.fields.image[0].url;
-  document.querySelector('#bgimg').append(celebImage);
+  // document.querySelector('#bgimg').append(celebImage).style.backgroundSize = "cover";
+  document.body.style.backgroundImage = 'url(' + celebImage.src + ')';
 }
 
-// function changeImg(imgNumber)	{
-//     // var myImages.src = celeb.fields.image[0].url;
-//     var myImages = ["img1.jpeg", "img2.jpeg", "img3.jpeg", "img4.png", "img5.jpeg", "img6.jpeg","img7.jpeg","img8.jpeg","img9.png","img10.jpeg","img11.png","img11.jpeg","img12.png"];
-//     var imgShown = document.body.style.backgroundImage;
-//     var newImgNumber =Math.floor(Math.random()*myImages.length);
-//     document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+// function showCelebs()	{
+//     var celebImage = document.createElement("img");
+//     // var imgShown = document.body.style.backgroundImage;
+//     celeb = celebs[Math.floor(Math.random() * celebs.length)];
+//     celebImage.src = celeb.fields.image[0].url;
+//     document.body.style.backgroundImage = celebImage;
 //   }
-//   window.onload=changeImg;
 
-  document.querySelector('.circle').addEventListener("click", refreshPage);
+
+
+  document.querySelector('body').addEventListener("click", refreshPage);
 
   function refreshPage(){
+    console.log(refreshPage);
+
       window.location.reload();
   }
 
+let square = document.getElementById('square');
+const onMouseMove = (e) =>{
+  square.style.left = e.pageX + 'px';
+  square.style.top = e.pageY + 'px';
+}
+document.addEventListener('mousemove', onMouseMove);
+
+
+      // function changeImg(imgNumber)	{
+      //     var myImages = ["img1.jpeg", "img2.jpeg", "img3.jpeg", "img4.png", "img5.jpeg", "img6.jpeg","img7.jpeg","img8.jpeg","img9.png","img10.jpeg","img11.png","img11.jpeg","img12.png"];
+      //     var imgShown = document.body.style.backgroundImage;
+      //     var newImgNumber =Math.floor(Math.random()*myImages.length);
+      //     document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+      //   }
+      //   window.onload=changeImg;
 
 //
 //

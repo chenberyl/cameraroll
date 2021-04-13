@@ -33,7 +33,6 @@ function gotAllCelebs(err) {
 
   consoleLogCelebs();
   showCelebs();
-  showCelebsImg();
 }
 
 
@@ -49,21 +48,16 @@ function showCelebs() {
   console.log(celebs);
   celebs.forEach((celeb) => {
 
+    // var celebImageBox = document.createElement("div");
+    // celebImageBox.classList.add("roll-images");
+
     var celebImage = document.createElement("img");
-    celebImage.classList.add("roll-images");
     celebImage.src = celeb.fields.image[0].url;
     document.querySelector('#grid').append(celebImage);
+
+    
   });
 }
-
-// function showCelebs() {
-//   console.log("showCelebs()");
-//
-//   var celebImage = document.createElement("img");
-//   celeb = celebs[Math.floor(Math.random() * celebs.length)];
-//   celebImage.src = celeb.fields.image[0].url;
-//   document.querySelector('body').append(celebImage);
-// }
 
  function done(err) {
     if (err) { console.error(err); return; }
