@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "SF Regular";
-  src: url("SFNSText-Regular.otf") format("otf");
-
- font-family: "SF Light";
- src: url("SFNSText-Light.otf") format("otf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 body {
   background-color: white;
@@ -14,7 +8,7 @@ body {
 }
 
 #grid {
-  margin-top: 5rem;
+  margin-top: 4.5rem;
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px 200px 200px;
   grid-template-rows: 200px 200px 200px 200px;
@@ -45,55 +39,127 @@ img {
   width: 150vw;
   height: 5rem;
   z-index: 5;
+  top: -5px;
 }
 
 .footer {
   position: fixed;
-  background-color: #F9F9F9;
+  background-color: white;
   opacity: 95%;
   width: 150vw;
-  height: 3rem;
+  height: 2.5rem;
   z-index: 5;
   bottom: 0vh;
 }
 
 p {
   position: fixed;
-  font-family: "Arial", sans-serif;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
   z-index: 6;
 }
 
-.camera-roll {
-  font-size: 30px;
+#time {
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
   color: black;
-  top: -6px;
+  z-index: 7;
+}
+
+.camera-roll {
+  font-weight: 400;
+  font-size: 28px;
+  color: black;
+  top: 8px;
 }
 
 a {
   position: fixed;
-  font-family: "Arial", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
 }
 
 .back {
+  font-weight: 300;
   color: #007aff;
-  left: 10vw;
-  top: 30px;
+  left: 4vw;
+  top: 40px;
   z-index: 6;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .select {
-  left: 82vw;
-  top: 3px;
-  font-size: 25px;
+  font-weight: 300;
+  left: 92vw;
+  top: 20px;
+  font-size: 20px;
   color: #007aff;
 }
 
 .number {
   color: black;
-  font-weight: 600;
-  top: 95vh;
+  font-weight: 500;
+  top: 96vh;
   z-index: 7;
+}
+
+@media (max-width: 680px) {
+
+  .camera-roll {
+    font-weight: 400;
+    font-size: 21px;
+    color: black;
+    top: 1.3rem;
+  }
+
+  .header {
+    position: fixed;
+    background-color: #F9F9F9;
+    opacity: 90%;
+    width: 102vw;
+    height: 5rem;
+    z-index: 5;
+    top: -5px;
+  }
+
+  .back {
+    font-weight: 300;
+    color: #007aff;
+    left: 4.3vw;
+    top: 46px;
+    z-index: 6;
+    font-size: 15px;
+  }
+
+  .select {
+    font-weight: 300;
+    left: 85vw;
+    top: 31px;
+    font-size: 15px;
+    color: #007aff;
+  }
+
+  .number {
+    color: black;
+    font-weight: 500;
+    top: 97.5vh;
+    z-index: 7;
+  }
+
+  img {
+      background: 50% 50% no-repeat;
+      width: 95px;
+      height: 95px;
+      object-fit: cover;
+  }
+
+  #grid {
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: 95px 95px 95px 95px;
+    grid-template-rows: 95px 95px 95px 95px;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+  }
 }

@@ -48,16 +48,31 @@ function showCelebs() {
   console.log(celebs);
   celebs.forEach((celeb) => {
 
-    // var celebImageBox = document.createElement("div");
-    // celebImageBox.classList.add("roll-images");
-
+    // create button
     var celebImage = document.createElement("img");
     celebImage.src = celeb.fields.image[0].url;
-    document.querySelector('#grid').append(celebImage);
+    // put image in button
+    document.querySelector('#grid').append(celebImage); //append button to grid
 
-    
+    // button onclick ()
+    // modal display (div for text, image, details)
+    // document.querySelector("text").append(celeb.fields.name)
+    // repeat for image .. details ..
+
+    // span onclick()
+    // close modal
+
   });
 }
+
+displayTime();
+
+function displayTime() {
+var x = new Date()
+document.getElementById('time').innerHTML = x;
+ }
+
+ console.log(displayTime);
 
  function done(err) {
     if (err) { console.error(err); return; }

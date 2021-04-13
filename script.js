@@ -89,11 +89,13 @@ function showCelebs() {
       window.location.reload();
   }
 
+
 let square = document.getElementById('square');
 const onMouseMove = (e) =>{
   square.style.left = e.pageX + 'px';
   square.style.top = e.pageY + 'px';
 }
+
 document.addEventListener('mousemove', onMouseMove);
 
 
