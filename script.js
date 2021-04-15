@@ -6,9 +6,66 @@
 // el.style.backgroundPositionX = e.offsetX + 'px';
 // el.style.backgroundPositionY = e.offsetY + 'px';
 //
-//   // el.style.backgroundPositionX = -e.offsetX + "px";
-//   // el.style.backgroundPositionY = -e.offsetY + "px";
+// });
+
+
+// $(document).ready(function() {
+// var movementStrength = 15;
+// var height = movementStrength / $(window).height();
+// var width = movementStrength / $(window).width();
+// $('body').mousemove(function(e){
+//           var pageX = e.pageX - ($(window).width() / 2);
+//           var pageY = e.pageY - ($(window).height() / 2);
+//           var newvalueX = width * pageX * -1 - 25;
+//           var newvalueY = height * pageY * -1 - 50;
+//           $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
+// });
+// });
+
+
+
 //
+// var lFollowX = 0,
+//     lFollowY = 0,
+//     x = 0,
+//     y = 0,
+//     friction = 1 / 30;
+//
+// function moveBackground() {
+//   x += (lFollowX - x) * friction;
+//   y += (lFollowY - y) * friction;
+//
+//   translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+//
+//   $('body').css({
+//     '-webit-transform': translate,
+//     '-moz-transform': translate,
+//     'transform': translate
+//   });
+//
+//   window.requestAnimationFrame(moveBackground);
+// }
+//
+// $(window).on('mousemove click', function(e) {
+//
+//   var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+//   var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+//   lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+//   lFollowY = (10 * lMouseY) / 100;
+//
+// });
+
+// moveBackground();
+
+// const bg = document.querySelector('body');
+// const windowWidth = window.innerWidth / 5;
+// const windowHeight = window.innerHeight / 5 ;
+//
+// bg.addEventListener('mousemove', (e) => {
+//   const mouseX = e.clientX / windowWidth;
+//   const mouseY = e.clientY / windowHeight;
+//
+//   bg.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
 // });
 
 var Airtable = require('airtable');
@@ -89,6 +146,14 @@ function showCelebs() {
       window.location.reload();
   }
 
+  // $(document).on("click mousemove","body",function(e){
+  // var x = e.clientX;
+  // var y = e.clientY;
+  // var newposX = x - 10;
+  // var newposY = y - 10; $("#square").css("transform","translate3d("+newposX+"px,"+newposY+"px,0px)");
+  // });
+
+document.getElementById('square').style.cursor = 'none'
 
 let square = document.getElementById('square');
 const onMouseMove = (e) =>{

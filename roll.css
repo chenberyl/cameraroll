@@ -32,6 +32,11 @@ img {
     object-fit: cover;
 }
 
+img:hover {
+  background-color: white;
+  opacity: 50%;
+}
+
 .header {
   position: fixed;
   background-color: #F9F9F9;
